@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--THIS PAGE IS THE MAIN HOMEPAGE AFTER THE LECTURER HAS SIGNED IN-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="styles/lect_homepage.css">
+    <link rel="stylesheet" href="styles/navigation_bar.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+
+    <!--NAVIGATION BAR START-->
+    <nav>
+      <label class ="logo">Task Tracker</label>
+
+      <!-- log out button -->
+      <a onclick="return confirm('Are you sure you want to log out now?');" href = "/index">
+        <label class = "log_out">
+          <i class="fas fa-sign-out-alt"></i>
+        </label>
+    </a>
+
+      <!-- once logged in, homepage should change to the one that shows a
+      list of things lect can do -->
+      <a href = "/lect_homepage"><input type = "button" id = "home">
+      <label for = "home" class = "homebtn">
+        <i class='fas fa-home'></i>
+      </label></a>
+    </nav>
+    <!--NAVIGATION BAR END-->
+
+    <!--UNIT BOX START-->
+    <div class = "activity-box">
+      <h3> What do you want to do? </h3>
+      <div class = "button-list">
+        <!-- add 'a' tag href to each page -->
+        <a href = "/create_project"><button type = "button" id = "create-project"> CREATE PROJECT </button></a>
+        <br><br>
+
+        <a href = "/select_project"><button type = "button" id = "view-project"> VIEW PROJECT </button></a>
+        <br><br>
+
+        <!-- <a href = "/select_group"><button type = "button" id = "allocation"> STUDENT ALLOCATION </button></a>
+        <br><br> -->
+
+        <!-- <button type = "button" id = "graph"> VIEW GRAPH </button> -->
+      </div>
+
+    </div>
+    <!--UNIT BOX END-->
+
+    <!-- <script src = "lect_unit_page.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,42 @@
+STUDENT
+S1: As a student I want to view all tasks that I worked on.
+S2: As a student I want to enter new tasks that I worked on onto the timelog.
+S3: As a student I want to have the possibility to time myself when working on a task.
+S4: As a student I want to be able to compile all files related to the project*
+
+
+MARKER
+M1: As a marker I want to see the contribution of each student on a group work.
+M2: As a marker I want to see on what task did a particular student worked on.
+
+STUDENT AND MARKER
+SM1: As a user I want to use the software even without an internet connection.
+SM2: As a user I want the software to be user friendly.
+
+
+
+Things that we'll need to do:
+- All visualisations can't be done before we finished with the handling of data
+  i.e. we must first: build a timer
+                      make the form so that user can store details of the task accurately
+                      need to make some restrictions on the format of the data so that we can handle it easily for graph
+                      Must make a way for the user to store that data in a particular file locally.
+                      We need to know which type of file we would use to store the data(e.g txt, csv)
+                      Need to know where file is stored and under what name
+
+After making sure the above works, we can start working on how 
+to merge the file of each student in a group into a single one.
+To do this we must: allow the user to select multiple files
+                    We need to know how to get access to these files from our JS code.
+                    Once we can reference all files, we can then create a new file which contain all these data
+                    Need to know what name to named the file and where it's stored locally.
+                    Student will then submit that file.
+
+After making sure the above are working as expected, we can now start with the graph,
+To do this we must: allow the user to select the correct file on his/her computer
+                    Then the user can choose what type of data he/she wants to see (more details needed)
+                    We can generate a graph(e.g. barchart) of the percentage contribution of each student as group
+                    Percentage of each student on a particular task.
+                    We must know what user really wants then we'll need to know how to make user choose it
+                    This must be done after selecting the graph then in our JS code we'll need to
+                    extract data for the correct column and calculate accordingly.  

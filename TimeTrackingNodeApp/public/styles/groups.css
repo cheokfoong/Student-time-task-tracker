@@ -1,0 +1,28 @@
+#group{
+    text-align: center;
+}
+
+#project{
+    text-align: center;
+}
+
+.btn{
+    float: right;
+    margin: 2px;
+}
+
+.back{
+    font-size: 30px;
+    color: white;
+    float: right;
+    margin-top: 20px;
+    margin-right: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+.back{
+    color: black;
+    font-size: 25px;
+    padding: 5px;
+}

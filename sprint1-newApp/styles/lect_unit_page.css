@@ -1,0 +1,11 @@
+.unit-main-box{
+  width: 750px;
+  height: 400px;
+  background: black;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 30px 30px;
+}

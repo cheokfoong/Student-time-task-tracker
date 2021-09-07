@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="styles/create_project.css">
+    <link rel="stylesheet" href="styles/navigation_bar.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+
+    <!--NAVIGATION BAR START-->
+    <nav>
+      <label class ="logo">Project</label>
+
+        <!-- log out button -->
+      <a onclick="return confirm('Are you sure you want to log out now?');" href = "/index">
+        <label class = "log_out">
+          <i class="fas fa-sign-out-alt"></i>
+        </label>
+      </a>
+
+      <!-- home button -->
+      <a href = "/lect_homepage"><input type = "button" id = "home">
+        <label for = "home" class = "homebtn">
+          <i class='fas fa-home'></i>
+        </label></a>
+
+      <!-- go back button -->
+      <a href = "/lect_homepage">
+        <label for = "back" class = "backbtn">
+          <i class="far fa-arrow-alt-circle-left"></i>
+        </label></a>
+
+      </nav>
+      <!--NAVIGATION BAR END-->
+
+
+    <!-- CREATE NEW PROJECT -->
+    <div class = "row">
+      <div class = "column">
+        <div class = "new-project-card">
+          <form method = "post" action = "/create_project">
+            <header>
+              <h3> NEW PROJECT </h3>
+            </header>
+
+            <br>
+            <label for="projectName">Project Name: </label>
+            <input type="text" id="project_name" name="project_name">
+
+            <br><br>
+            <label for="projectDesc">Project Description: </label>
+            <input type="text" id="description" name="description">
+
+            <br><br>
+            <label for ="numOfStudents"> Number of Students per Group:</label>
+            <select name = "numbers" id = "numbers">
+              <option value = "select">Please select</option>
+              <option value = "2">2</option>
+              <option value = "3">3</option>
+              <option value = "4">4</option>
+              <option value = "5">5</option>
+              <option value = "6">6</option>
+              <option value = "7">7</option>
+              <option value = "8">8</option>
+              <option value = "9">9</option>
+              <option value = "10">10</option>
+            </select><br>
+
+            <br><input type="submit" value="CREATE" id = "createBtn">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="/javascripts/create_project.js"></script>
+  </body>
+</html>

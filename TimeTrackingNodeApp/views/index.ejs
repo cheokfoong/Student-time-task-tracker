@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/styles/navigation_bar.css">
+    <link rel="stylesheet" href="/styles/homepage.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="/javascripts/homepage.js"></script>
+  </head>
+  <body>
+    <!--NAVIGATION BAR START-->
+      <nav>
+        <label class ="logo">Task Tracker</label>
+      </nav>
+    <!--NAVIGATION BAR END-->
+
+    <!-- DECISION BOX -->
+      <div class = "decisionbox">
+        <h3> I am a </h3>
+        <div class = "buttondropdown">
+          <button type = "button" id = "studentbtn" class = "dropbtn" onclick="buttonClickStudent()"> STUDENT </button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="/student_login">Sign In</a>
+            <a href = "/signup_page">Sign Up</a>
+          </div>
+        </div>
+        <br><br>
+        <div class = "buttondropdown">
+          <button type = "button" id = "lecturerbtn" class = "dropbtn" onclick="buttonClickLect()"> LECTURER </button>
+          <div id="myDropdown2" class="dropdown-content">
+            <a href="/lecturer_login">Sign In</a>
+          </div>
+        </div>
+      </div>
+    <!-- DECISION BOX END-->
+
+  </body>
+</html>
+

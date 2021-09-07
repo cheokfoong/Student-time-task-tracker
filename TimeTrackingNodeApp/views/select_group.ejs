@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Group page</title>
+    <link rel="stylesheet" href="styles/project_groups.css">
+    <link rel="stylesheet" href="styles/navigation_bar.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body onload="loadGroups()">
+
+    <!--NAVIGATION BAR START-->
+  <nav>
+
+    <label class ="logo">Groups</label>
+
+    <!-- log out button -->
+    <a onclick="return confirm('Are you sure you want to log out now?');" href = "/signup_page">
+      <label class = "log_out">
+        <i class="fas fa-sign-out-alt"></i>
+      </label>
+  </a>
+    
+    <!-- home button -->
+    <a href = "/lect_homepage"><input type = "button" id = "home">
+    <label for = "home" class = "homebtn">
+      <i class='fas fa-home'></i>
+    </label></a>
+
+
+    <!-- go back button -->
+    <a href = "/select_project">
+      <label for = "back" class = "backbtn">
+        <i class="far fa-arrow-alt-circle-left"></i>
+      </label></a>
+
+  </nav>
+  <!--NAVIGATION BAR END-->
+  <br><br><br><br>
+
+
+  <!--  button to add a group to table -->
+  <button  type ="button" onclick="addGroups()">
+    ADD
+  </button>
+
+  <!-- A table for groups -->
+  <table id="group_table">
+
+    <thead>
+      <tr>
+        <th>GROUPS</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+    </tbody>
+  </table>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+      var projectList = '<%- JSON.stringify(projects) %>';
+      var projectSel = '<%- projectSelected %>';
+      var projectGroupList = '<%- JSON.stringify(projectGroups) %>';
+      var MembersList = '<%- JSON.stringify(members) %>';
+      var NumberOfMembers = '<%- JSON.stringify(nums) %>';
+    </script>
+    <script src="/javascripts/project_groups.js"></script>
+
+</body>
+</html>
+

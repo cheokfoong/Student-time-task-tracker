@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Sign Up Page</title>
+  <link rel="stylesheet" href="styles/navigation_bar.css">
+  <link rel="stylesheet" href="styles/signup_page.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="signup_page.js"></script>
+</head>
+<body>
+
+  <!--NAVIGATION BAR START-->
+  <nav>
+    <label class ="logo">Task Tracker</label>
+    <input type = "button" id = "info">
+    <label for = "info" class = "infobtn">
+      <i class="fas fa-info-circle"></i>
+    </label>
+    <a href = "homepage.html"><input type = "button" id = "home">
+    <label for = "home" class = "homebtn">
+      <i class='fas fa-home'></i>
+    </label></a>
+  </nav>
+  <!--NAVIGATION BAR END-->
+
+  <!--SIGN UP BOX-->
+  <div class = "sign-up-box">
+    <br><h1 class = "signup-title"> SIGN UP </h1>
+    <div class = "button-box">
+      <div id = "btn"></div>
+      <button type = "button" class = "toggle-btn" onclick="studentSignUp()">Student</button>
+      <button type = "button" class = "toggle-btn" onclick="lectSignUp()">Lecturer</button>
+    </div>
+
+    <!-- for student sign up-->
+    <form id = "student-signup" class = "input-group">
+    <input type = "text" class ="input-field" placeholder="Name" required>
+    <input type = "text" class = "input-field" placeholder="Username" required>
+    <input type = "text" class ="input-field" placeholder="Password" required>
+    <br><br><button type = "submit" class = "signup-btn">Sign Up</button> <span id = "testDB"> &nbsp; </span> <br>
+    </form>
+
+    <!-- for lecturer sign up-->
+    <form id = "lecturer-signup" class = "input-group">
+    <input type = "text" class = "input-field" placeholder="Username" required>
+    <input type = "email" class ="input-field" placeholder="Email Address" required>
+    <input type = "text" class ="input-field" placeholder="Password" required>
+    <br><br><button type = "submit" class = "signup-btn">Sign Up</button>
+    </form>
+  </div>
+  <!--SIGN UP BOX END-->
+
+</body>
+</html>

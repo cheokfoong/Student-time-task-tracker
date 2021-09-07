@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groups</title>
+    <link rel="stylesheet" href="styles/groups.css">
+    <link rel="stylesheet" href="styles/navigation_bar.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+      var studentList = '<%- JSON.stringify(students) %>';
+      var studentsAlreadyUsed = '<%- JSON.stringify(studentsInGroups) %>';
+      var projetSel = '<%- projectSelected %>';
+      var projectList = '<%- JSON.stringify(projects) %>';
+      var NumOfMembers = '<%- JSON.stringify(numMembers) %>';
+    </script>
+    <script src="/javascripts/groups.js"></script>
+</head>
+<body onload="myFunc()">
+
+  <!--NAVIGATION BAR START-->
+  <nav>
+    <label class ="logo">Groups</label>
+
+    
+      <!-- log out button -->
+    <a onclick="return confirm('Are you sure you want to log out now?');" href = "/index">
+      <label class = "log_out">
+        <i class="fas fa-sign-out-alt"></i>
+      </label>
+    </a>
+
+    <!-- home button -->
+    <a href = "/lect_homepage"><input type = "button" id = "home">
+      <label for = "home" class = "homebtn">
+        <i class='fas fa-home'></i>
+      </label></a>
+
+    <!-- go back button -->
+    <a href = "/lect_homepage">
+      <label for = "back" class = "backbtn">
+        <i class="far fa-arrow-alt-circle-left"></i>
+      </label></a>
+      
+
+    </nav>
+    <!--NAVIGATION BAR END-->
+
+    <h1 id = "project"> PROJECT ALLOCATION</h1>
+    <h2 id = "group"> Groups</h2>
+    Group Name: <input type="text" id="gName" name="gName">
+
+    <p>Student List: <select id="mySelect" onchange="myFunction()"></select> </p>
+        <ul id="members">
+            <!-- Insert list members here -->
+        </ul>
+
+    <button type = "button" id = "allocateButton" class="btn" onclick="allocate();"> ALLOCATE STUDENT</button>
+    <button type = "button" id = "deallocateButton" class="btn" onclick="deallocate();"> REMOVE STUDENT</button>
+    <!-- <button type = "button" id = "viewButton" class="btn" onclick="view();"> VIEW TASK </button> -->
+    <button type = "button" id = "viewButton" class="btn" onclick="save();"> SAVE </button>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project log</title>
+    <link rel="stylesheet" href="styles/project_log.css">
+    <link rel="stylesheet" href="styles/navigation_bar.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body onload="loadLogs()">
+
+    <!--NAVIGATION BAR START-->
+  <nav>
+    <label class ="logo">Group Project Log</label>
+
+    <!-- log out button -->
+    <a onclick="return confirm('Are you sure you want to log out now?');" href = "/index">
+      <label class = "log_out">
+        <i class="fas fa-sign-out-alt"></i>
+      </label>
+  </a>
+
+    <!-- home button -->
+    <a href = "/lect_homepage"><input type = "button" id = "home">
+    <label for = "home" class = "homebtn">
+      <i class='fas fa-home'></i>
+    </label></a>
+
+    <!-- go back button -->
+    <a href = "/select_group">
+      <label for = "back" class = "backbtn">
+        <i class="far fa-arrow-alt-circle-left"></i>
+      </label></a>
+  </nav>
+  <!--NAVIGATION BAR END-->
+  <br><br><br><br><br><br><br>
+
+  <!-- Name of the project -->
+  <!-- <p style="text-align-last: center;">PROJECT: Assignment 1 Black Box Testing</p> -->
+  <p style="text-align-last: center;">PROJECT DETAILS</p>
+
+  <!-- A table for member's log -->
+  <table id="Log_table">
+
+    <thead>
+      <tr>
+        <!-- <th colspan="9">GROUPS:MAT18B</th> -->
+        <th colspan="9">GROUP LOGS</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr style="background-color: rgb(189, 184, 184);">
+        <td>Name</td>
+				<td>Student ID</td>
+				<td>Task</td>
+				<td>Date</td>
+        <td>Start time</td>
+        <td>End time</td>
+        <td>Task Description</td>
+        <td>Status</td>
+        <td>Comment</td>
+      </tr>
+    </tbody>
+
+  </table>
+
+  <script>
+    var groupProjectlog = '<%- JSON.stringify(groupSelectedTasklog) %>';
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="/javascripts/project_log.js"></script>
+</body>
+</html>
+
+
+
+

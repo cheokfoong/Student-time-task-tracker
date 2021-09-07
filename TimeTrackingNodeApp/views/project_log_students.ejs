@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project log</title>
+    <link rel="stylesheet" href="styles/project_log_students.css">
+    <link rel="stylesheet" href="styles/navigation_bar.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+      var studentName = '<%- currentStudent %>';
+      var projectlog = '<%- JSON.stringify(tasklog) %>';
+    </script>
+    <script src="/javascripts/project_log_students.js"></script>
+</head>
+<body onload="loadLogs()">
+
+    <!--NAVIGATION BAR START-->
+  <nav>
+    <label class ="logo">Group Project Log</label>
+    
+    <!-- log out button -->
+    <a onclick="return confirm('Are you sure you want to log out now?');" href = "/index">
+      <label class = "log_out">
+        <i class="fas fa-sign-out-alt"></i>
+      </label>
+  </a>
+
+    <!-- home button -->
+    <a href = "/select_project_students"><input type = "button" id = "home">
+    <label for = "home" class = "homebtn">
+      <i class='fas fa-home'></i>
+    </label></a>
+
+    <!-- go back button -->
+    <a href = "/select_group_students">
+      <label for = "back" class = "backbtn">
+        <i class="far fa-arrow-alt-circle-left"></i>
+      </label></a>
+
+    <!-- button to create new log -->
+    <input type ="button" onclick="openModal()" id="create_log" class="create_log" value="+ Create Log">
+
+    <!-- Start Of Modal Box for create new log-->
+    <div id="myModal" class="modal">
+
+      <!-- Modal box content -->
+      <div class="modal-content">
+    
+      <div class="stdID">
+        <label for="studentID">STUDENT ID:</label>
+          <input type="text" id="siD">        
+      </div>
+  
+      <div class="NameOfTask">  
+      <label for="work">NAME OF TASK:</label>
+          <input type="text" id="task" size="30">
+      </div>
+  
+      <div class="time">
+          <label for="timing">TIME SPENT:</label><br>
+  
+          <label>START TIME:</label>
+          <!-- <input type="text" id="start_time" placeholder = "xx:xx:xx" size = "4" onblur = "checkTime()"> -->
+          <input type="time" id="start_time">
+                
+          <label>END TIME:</label>
+          <!-- <input type="text" id="end_time" placeholder= "xx:xx:xx" size = "4" onblur = "checkTime()" >   -->
+          <input type="time" id="end_time">
+          <!-- <span id = "TimePrompt"> e.g. 1:23:45 hrs:min:sec </span> -->
+      </div>
+  
+      <div class="date">
+        <label for="date">DATE:</label>
+          <input type="date" id="date"><br>
+      </div>
+  
+      <div class="taskDescript">             
+          <label>TASK DESCRIPTION:</label><br>
+          <textarea maxlength="200" wrap="soft" class="descriptBox"  id="description"></textarea>
+      </div>
+  
+      <div class="taskStatus">
+          <label for="status">CURRENT STATUS OF TASK:</label>
+      <input type = "radio" name = "status" id = "status" value = "InProgress" checked>
+      <label for = "InProgress">In Progress</label><br>
+          <input type = "radio" name = "status" id = "completed" value = "Completed">
+          <label for = "Complete">Complete</label><br><br>       
+      </div>
+      <br>
+  
+      <button class="save" type ="button" id ="saveButton" onclick="checkSave()">Save</button>
+      <input type="button" class= "cancel" value=" CANCEL" >
+
+      </div>
+    </div>
+    <!-- End Of Modal Box-->
+
+  </nav>
+  <!--NAVIGATION BAR END-->
+  <br><br><br><br><br><br><br>
+
+  <!-- Name of the project -->
+  <p style="text-align-last: center;">PROJECT DETAILS</p>
+
+  <!-- A table for member's log -->  
+  <table id="Log_table">
+
+    <thead>
+      <tr>
+        <th colspan="9">GROUP LOGS</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr style="background-color: rgb(189, 184, 184);">
+        <td>Name</td>
+				<td>Student ID</td>
+				<td>Task</td>
+				<td>Date</td>
+        <td>Start time</td>
+        <td>End time</td>
+        <td>Task Description</td>
+        <td>Status</td>
+        <td>Comment</td>
+      </tr>
+    </tbody>
+
+  </table>
+
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+body{
+  text-align: center;
+  background-image: url('https://www.wallpapertip.com/wmimgs/66-666819_website-design-background-creative-background-image-for-website.jpg');
+}
+
+body a{
+  margin-left: 20px;
+  text-decoration: none;
+  text-align: center;
+  color: #060606;
+  background: #c7b8b859;
+  padding: 24px 55px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+body a:active, body a:hover{
+  background-color: #01dbf159;
+  color: #611f92;
+}
+
+#startButton{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}

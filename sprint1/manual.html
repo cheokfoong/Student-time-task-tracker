@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Logs</title>
+        <link rel="stylesheet" href="css/manualStyle.css">
+        <script src = "validation.js"></script>
+				<script src = "timer.js"></script>
+				<script src = "CSVhandle.js"></script>
+				<script src = "logTable.js"></script>
+				<script src = "database.js"></script>
+				<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+				<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-pink.min.css">
+				<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</head>
+<body>
+	<!-- Always shows a header, even in smaller screens. -->
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<header class="mdl-layout__header">
+			<div class="mdl-layout__header-row">
+				<!-- Title -->
+				<span class="mdl-layout-title">MY LOG</span>
+				<!-- Add spacer, to align navigation to the right -->
+				<div class="mdl-layout-spacer"></div>
+				<!-- Navigation. We hide it in small screens. -->
+				<nav class="mdl-navigation mdl-layout--large-screen-only">
+					<i class="material-icons mdl-js-ripple-effect" id = "homeIcon"><a href="main.html">home</a></i>
+					<!--<i class="material-icons mdl-js-ripple-effect" id = "timerIcon">timer</i>
+					<i class="material-icons mdl-js-ripple-effect" id = "graphIcon">leaderboard</i>-->
+				</nav>
+			</div>
+		</header>
+		<main class="mdl-layout__content">
+			<div class="page-content">
+
+				<section class = "myForm">
+
+				<p><h6>Fill in the form below to store your time.
+				</br> Then click save after you finished. </h6>
+				</p>
+
+				<label for="fname">FIRST NAME:</label>
+				<input type="text" id="fname" name="fname">
+
+				<label for="lname">LAST NAME:</label>
+	  		<input type="text" id="lname" name="lname">
+
+	      <label for="studentID">STUDENT ID:</label>
+	  		<input type="text" id="siD"><br>
+				<br>
+
+				<label for="work">NAME OF TASK:</label><br>
+	  		<input type="text" id="task"><br>
+
+				<br>
+				<label for="timing">TIME SPENT ON TASK:</label><br>
+	  		<input type="text" id="time" placeholder = "xx:xx:xx" onblur = "checkTime()"> <span id = "TimePrompt"> e.g. 1:23:45 hrs:min:sec </span>
+				<p>You can also click on the button to start the timer and click on it again to stop it
+				<button  type = "button" id="timerButton" onclick="initDB()">Start Timer </button> <span id = "Timer"> &nbsp; </span> <br> <span id = "TestDB"> &nbsp; </span> <br>
+
+				<br><label for="date">DATE YOU DID THE TASK:</label><br>
+	  		<input type="date" id="date"><br>
+
+				<br>
+				<label for="status">CURRENT STATUS OF TASK:</label><br>
+				<input type = "radio" name = "status" id = "status" value = "InProgress" checked>
+				<label for = "InProgress">In Progress</label><br>
+	    	<input type = "radio" name = "status" id = "completed" value = "Completed"><label for = "Complete">Complete</label><br><br>
+
+				<br>
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type ="button" id ="saveButton" onclick="checkSave()">
+					SAVE
+				</button>
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type ="button" id ="deleteButton" onclick="removeTable()">
+					DELETE LAST SAVE
+				</button>
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type ="button" id ="viewButton" onclick="viewFile()" disabled>
+					VIEW FILE
+				</button>
+
+
+				<br>
+				<br>
+				<input id="myfile" type='file'  onchange="readFile(event)" style="visibility:hidden;" accept = '.csv, .txt'/>
+				<br>
+				<label >Select a file:</label>
+				<button id = "openFile" onclick ="openFile()">OPEN</button>
+				<label>Export table:</label>
+				<button onclick="exportTableToCSV('members.csv')">Export</button>
+				<pre id="file-content" ></pre>
+
+
+				<table class = "logTable" id = "logTable">
+					<thead>
+						<tr>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Student ID</th>
+							<th>Task</th>
+							<th>Date</th>
+							<th>Time</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+
+			</section>
+		</div>
+		</main>
+	</div>
+
+			<nav>
+				<a href="main.html">Return to Main Page</a>
+			</nav>
+		</section>
+	</main>
+</body>
+</html>

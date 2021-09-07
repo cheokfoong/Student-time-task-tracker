@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Generate Graph</title>
+
+</head>
+<body>
+	<header>
+		<h1>Graph Generator</h1>
+		<nav>
+
+			<a href="clock.html">Time</a>
+			<a href="manual.html">Logs</a>
+			<a href="graph.html" class = "active">Graphs</a>
+			<a href="compile.html">Compile</a>
+
+		</nav>
+	</header>
+		<main>
+
+		<section class = "right">
+
+	<h1>Graph generator</h1>
+	<p>Click on the button below to choose your files and then click generate graph</p>
+
+	<form>
+	<label for="myfile">Select a file:</label>
+	<input type="file" id="myfile" name="myfile"><br>
+
+
+
+      <br><button type = "button" id = "graphButton"> Generate graph </button>
+
+	</section>
+        <br><canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+</main>
+</body>
+</html>

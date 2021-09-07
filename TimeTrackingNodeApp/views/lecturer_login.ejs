@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang = "en" dir = "ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign In Page</title>
+  <link rel="stylesheet" href="/styles/navigation_bar.css">
+  <link rel="stylesheet" href="/styles/lecturer_login.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+
+<!--NAVIGATION BAR START-->
+  <nav>
+    <label class ="logo">Task Tracker</label>
+
+    <!--FIRST HOMEPAGE BUTTON-->
+    <a href = "/index"><input type = "button" id = "home">
+    <label for = "home" class = "homebtn">
+      <i class='fas fa-home'></i>
+    </label></a>
+  </nav>
+<!--NAVIGATION BAR END-->
+
+<!--LOGIN BOX-->
+  <div class = "loginbox">
+    <i class = "far fa-user-circle" id = "avatar"></i><br>
+      <br><h1 class = "logintitle"> LECTURER LOGIN </h1>
+      <form method = "post" action = "/lect_homepage">
+        <p><label for="email">Email Address</label></p>
+        <input type="text" id="username" name="email" placeholder="Enter Email Address">
+
+        <p><label for="password">Password</label></p>
+        <input type="password" id="password" name="password" placeholder="Enter Password">
+        <input type = "submit" name = "" value = "Login">
+
+        <a href="/index"><input type = "button" value = "Go Back"></a>
+
+      </form>
+  </div>
+<!--LOGIN BOX END-->
+
+</body>
+</html>
+
+
+

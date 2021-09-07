@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Project page</title>
+    <link rel="stylesheet" href="styles/project_groups_students.css">
+    <link rel="stylesheet" href="styles/navigation_bar.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+      var studentProjects = '<%- JSON.stringify(currentStudentProjects) %>';
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="/javascripts/project_groups_students.js"></script>
+</head>
+<body onload="loadProjects()">
+
+    <!--NAVIGATION BAR START-->
+  <nav>
+    <label class ="logo">Projects</label>
+
+    <!--Log out button {will redirect to the first homepage}-->
+    <a onclick="return confirm('Are you sure you want to log out now?');" href = "/index"> 
+      <label class = "log_out">
+        <i class="fas fa-sign-out-alt"></i>
+      </label>
+  </a>
+
+  </nav>
+  <!--NAVIGATION BAR END-->
+
+  <div id ="here">
+
+  </div>
+    
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,51 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: sans-serif;
+}
+
+nav{
+  background: #3F84D6;
+  height: 70px;
+  width: 100%;
+}
+
+label.logo{
+  color: white;
+  font-size: 30px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+.homebtn, .infobtn, .log_out, .backbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  margin-top: 20px;
+  margin-right: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.homebtn:hover, .infobtn:hover, .backbtn:hover{
+  background: #2261AC;
+  transition: 0.5s;
+}
+
+#home, #info, #back{
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+}

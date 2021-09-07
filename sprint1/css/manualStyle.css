@@ -1,0 +1,60 @@
+nav a:active, nav a:hover{
+  background-color: #01dbf159;
+  color: #611f92;
+}
+
+nav a{
+  text-decoration: none;
+  text-align: center;
+  color: #060606;
+  background: #c7b8b859;
+  padding: 14px 15px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+body{
+  text-align: center;
+  background-image: url('https://www.wallpapertip.com/wmimgs/66-666819_website-design-background-creative-background-image-for-website.jpg');
+}
+
+#saveButton{
+  background: black;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.material-icons{
+  padding-left: 30px;
+}
+
+.mdl-layout__header-row{
+  background: #b0bec5
+}
+
+.logTable {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5em;
+  min-width: 400px;
+}
+
+.logTable thead tr {
+  text-align: left;
+  font-weight: bold
+}
+
+.logTable th, .logTable td {
+  padding: 12px 15px;
+}
+
+.logTable tbody tr {
+  border-bottom: 1px solid #dddddd;
+  background: rgba(255,255,255,0.5);
+}
